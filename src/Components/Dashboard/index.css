@@ -32,3 +32,63 @@
     /* Slightly darker gray */
     transform: scale(1.05);
 }
+.dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fusterestic font choice */
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-title {
+    font-size: 2.2em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 2px dashed #ffb6c1;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .dashboard-card {
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(255, 102, 179, 0.25) !important;
+  }
+  
+  .random-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 102, 179, 0.4) !important;
+  }
+  
+  /* Add some fun animations */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .dashboard-card:nth-child(odd):hover {
+    animation: float 2s ease-in-out infinite;
+  }
